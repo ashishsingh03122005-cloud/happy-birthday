@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Love</title>
+    <style>
+        body {
+            background-color: #fff0f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ff4d6d;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 2rem;
+        }
+        .message {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #ff4d6d;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #ff4d6d;
+            font-size: 1.2rem;
+        }
+        /* Floating Hearts Animation */
+        .heart {
+            color: #ff4d6d;
+            position: fixed;
+            top: -10%;
+            font-size: 20px;
+            animation: move 3s linear infinite;
+        }
+        @keyframes move {
+            0% { transform: translateY(0vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="photo.jpg" alt="Our Beautiful Memory" class="profile-pic">
+        
+        <h1>Happy Birthday, My Love! ❤️</h1>
+        <p style="font-weight: bold;">Celebrating 1 Year of Us</p>
+
+        <div class="message">
+            <p>Today marks a very special day, not just because it's your birthday, but because it reminds me how much you matter to me. It has been <b>one amazing year</b> since we met, and I can honestly say you’ve changed me for the better. I am a different person today because of your presence in my life.</p>
+            
+            <p>I want to say <span class="highlight">sorry</span> for never officially proposing to you. I know that might have made you overthink or feel some kind of pressure, and that was never my intention. Please know that my love for you is a commitment I’ve made to myself. Even if life ever pulls us apart, I will continue to love you just as much. I never want you to feel burdened or pressured by me.</p>
+            
+            <p>Also, if I ever annoy or irritate you, please don't hesitate to scold me! I want to share more than just your happy moments; I deserve to be there for your sad days too, perhaps even more than the good ones. I'm here for all of you.</p>
+        </div>
+
+        <div class="footer">
+            I love you, sweetheart. My cutie pie! 🎂❤️
+        </div>
+    </div>
+
+    <script>
+        // Simple script to create falling hearts
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 3000);
+        }, 300);
+    </script>
+</body>
+</html>
